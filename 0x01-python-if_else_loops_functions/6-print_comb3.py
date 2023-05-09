@@ -6,5 +6,5 @@ for i in range(0, 10):
             continue
         if i >= j:
             continue
-        comma = ',' if i*10+j != 89 else "\n"
-        print(f"{i}{j}{comma} ", end='')
+        comma = ', ' if i*10+j != 89 else "\n"
+        print("{}{}{}".format(i,j,comma), end='')
