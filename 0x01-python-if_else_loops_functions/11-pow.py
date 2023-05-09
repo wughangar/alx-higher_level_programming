@@ -7,5 +7,4 @@ def pow(a, b):
     elif b % 2 == 0:
         return pow(a * a, b // 2)
     else:
-        return a * pow(a, b -1)
-
+        return a * pow(a, b - 1)
