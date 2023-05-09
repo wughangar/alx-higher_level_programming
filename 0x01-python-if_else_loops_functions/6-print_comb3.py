@@ -7,4 +7,4 @@ for i in range(0, 10):
         if i >= j:
             continue
         comma = ', ' if i*10+j != 89 else "\n"
-        print("{}{}{}".format(i,j,comma), end='')
+        print("{}{}{}".format(i, j, comma), end='')
