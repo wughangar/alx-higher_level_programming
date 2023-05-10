@@ -18,7 +18,7 @@ listint_s Cnode(int number)
 	}
 	newNode->data = number;
 	newNode->next = NULL;
-	return (newNode);
+	return (*newNode);
 }
 
 /**
@@ -29,9 +29,9 @@ listint_s Cnode(int number)
  * Return: tthe list
  */
 
-listint_t* insert_node(listint_t** head, int number)
+listint_s* insert_node(listint_s** head, int number)
 {
-	listint_t* newNode = createNode(number);
+	listint_s* newNode = Cnode(number);
 
 	if (newNode == NULL)
 	{
@@ -45,7 +45,7 @@ listint_t* insert_node(listint_t** head, int number)
 	}
 	else
 	{
-		listint_t* current = *head;
+		listint_s* current = *head;
 		while (current->next != NULL && number > current->next->data)
 		{
 			current = current->next;
@@ -62,9 +62,9 @@ listint_t* insert_node(listint_t** head, int number)
  *
  * Return: void
  */
-void printlist(listint_t* head)
+void printlist(listint_s* head)
 {
-	listint_t* current = head;
+	listint_s* current = head;
 
 	while (current != NULL)
 	{
