@@ -8,13 +8,13 @@
  *
  * Return: list 
  */
-listint_s Cnode(int number)
+listint_t Cnode(int number)
 {
-	listint_s* newNode = (listint_s*)malloc(sizeof(listint_s));
+	listint_t* newNode = (listint_t*)malloc(sizeof(listint_t));
 	if (newNode == NULL)
 	{
 		printf("Memory alloaction failed.\n");
-		return (listint_s);
+		return (listint_t);
 	}
 	newNode->data = number;
 	newNode->next = NULL;
@@ -29,13 +29,13 @@ listint_s Cnode(int number)
  * Return: tthe list
  */
 
-listint_s* insert_node(listint_s** head, int number)
+listint_t* insert_node(listint_t** head, int number)
 {
-	listint_s* newNode = Cnode(number);
+	listint_t* newNode = Cnode(number);
 
 	if (newNode == NULL)
 	{
-		return (Null);
+		return (NULL);
 	}
 
 	if (*head == NULL || number < (*head)->data)
@@ -45,7 +45,7 @@ listint_s* insert_node(listint_s** head, int number)
 	}
 	else
 	{
-		listint_s* current = *head;
+		listint_t* current = *head;
 		while (current->next != NULL && number > current->next->data)
 		{
 			current = current->next;
@@ -62,15 +62,14 @@ listint_s* insert_node(listint_s** head, int number)
  *
  * Return: void
  */
-void printlist(listint_s* head)
+void printlist(listint_t* head)
 {
-	listint_s* current = head;
+	listint_t* current = head;
 
 	while (current != NULL)
 	{
 		printf("%d ", current->data);
-		current = current-.next;
+		current = current->next;
 	}
 	printf("\n");
 }
-

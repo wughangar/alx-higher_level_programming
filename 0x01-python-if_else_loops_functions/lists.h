@@ -12,10 +12,10 @@ typedef struct Node
 {
 	int data;
 	struct Node* next;
-} listint_s;
+} listint_t;
 
-listint_s Cnode(int number);
-void printlist(listint_s* head);
-listint_s *insert_node(listint_s **head, int number);
+listint_t Cnode(int number);
+void printlist(listint_t* head);
+listint_t *insert_node(listint_t **head, int number);
 
 #endif /* LISTS-H */
