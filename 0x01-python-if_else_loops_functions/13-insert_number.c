@@ -10,11 +10,11 @@
  */
 listint_s Cnode(int number)
 {
-	listint_t* newNode = (listint_t*)malloc(sizeof(listint_t0));
+	listint_s* newNode = (listint_s*)malloc(sizeof(listint_t));
 	if (newNode == NULL)
 	{
 		printf("Memory alloaction failed.\n");
-		return (NULL);
+		return (listint_s);
 	}
 	newNode->date = number;
 	newNode->next = NULL;
