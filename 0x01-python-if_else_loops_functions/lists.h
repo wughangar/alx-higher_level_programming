@@ -8,14 +8,14 @@
  *
  */
 
-typedef struct listint_t
+typedef struct Node
 {
-	int value;
-	struct listint_s* next;
+	int data;
+	struct Node* next;
 } listint_s;
 
-size_t displayList(listint_t *h);
-void free_Listint(listint_t *head);
+listint_t Cnode(int number);
+void printList(listint_t* head);
 listint_t *insert_node(listint_t **head, int number);
 
 #endif /* LISTS-H */

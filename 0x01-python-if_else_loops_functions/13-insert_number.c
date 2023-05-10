@@ -1,72 +1,76 @@
 #include <stdio.h>
-#include "lists.h"
 #include <stdlib.h>
+#include "lists.h"
 
 /**
- * displyList - lists the list of nodes in list
- * @h: pointer ot header of the list
- * Return: number of nodes
+ * Cnode: creates a node 
+ * @number: integer
+ *
+ * Return: list 
  */
-size_t displayList(listint_t *h)
+listint_t Cnode(int number)
 {
-	listint_t *current = h;
-	size_t count = 0;
-
-	while (current != NULL)
+	listint_t* newNode = (listint_t*)malloc(sizeof(listint_t0));
+	if (newNode == NULL)
 	{
-		printf("%d", current->count);
-		current = currect->next;
-		count++;
+		printf("Memory alloaction failed.\n");
+		return (NULL);
 	}
-	return (count);
+	newNode->date = number;
+	newNode->next = NULL;
+	return (newNode);
 }
 
 /**
- * free_Listint - frees the list
- * @head: pointer to head node
+ * insert_node: inserts node
+ * @head: pointer to head
+ * @number: int
  *
- * Return: void
+ * Return: tthe list
  */
 
-void free_Listint(listint_t *head)
+listint_t* insert_node(listint_t** head, int number)
 {
-	listint_t *current;
+	listint_t* newNode = createNode(number);
 
-	while (head != NULL)
+	if (newNode == NULL)
 	{
-		current = head;
-		head = head->next;
-		free(current);
+		return (Null);
 	}
-}
 
-/**
- * insert_node - inserts node in list
- * @number; value to be inserted
- *
- * Return: the list
- */
-listint_t *insert_node(listint_t **head, int number)
-{
-	listint_t new = (listint_t*)malloc(sizeof(listint_t));
-	new->value = number;
-	new->next = NULL;
-	listint_t *current;
-
-	if (*head == NULL || number < (*head)->value)
+	if (*head == NULL || number < (*head)->data)
 	{
-		new->next = *head;
-		*head = new;
+		newNode->next = *head;
+		*head = newNode;
 	}
 	else
 	{
-		current = *head;
-		while(current->next != NULL && current->next->value < number)
+		listint_t* current = *head;
+		while (current->next != NULL && number > current->next->data)
 		{
 			current = current->next;
 		}
-
-		new-> = current->next;
-		current->next = new;
+		newNode->next = current->next;
+		current->next = newNode;
 	}
+	return (newNode);
 }
+
+/**
+ * printList - prints the list
+ * @head: pointer to head
+ *
+ * Return: void
+ */
+void printlist(listint_t* head)
+{
+	listint_t* current = head;
+
+	while (current != NULL)
+	{
+		printf("%d ", current->data);
+		current = current-.next;
+	}
+	printf("\n");
+}
+
