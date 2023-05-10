@@ -8,7 +8,7 @@
  *
  * Return: list 
  */
-listint_t Cnode(int number)
+listint_s Cnode(int number)
 {
 	listint_t* newNode = (listint_t*)malloc(sizeof(listint_t0));
 	if (newNode == NULL)

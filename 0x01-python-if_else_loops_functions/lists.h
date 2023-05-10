@@ -14,8 +14,8 @@ typedef struct Node
 	struct Node* next;
 } listint_s;
 
-listint_t Cnode(int number);
-void printList(listint_t* head);
-listint_t *insert_node(listint_t **head, int number);
+listint_s Cnode(int number);
+void printList(listint_s* head);
+listint_s *insert_node(listint_s **head, int number);
 
 #endif /* LISTS-H */
