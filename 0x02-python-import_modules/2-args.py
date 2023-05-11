@@ -2,12 +2,12 @@
 import sys
 if __name__ == "__main__":
     def main():
-        argc = len(sys.argv)
-        argv = sys.argv
-
-        if argc == 1:
+        argc = len(sys.argv) - 1
+        argv = sys.argv[1:]
+        print("{} argument(s):".format(argc))
+        if argc == 0:
             print(".")
         else:
-            for i in range(argc):
-                print("{}: {}".format(i, argv[i]))
-
+            for i, j in enumerate(argv, start=1):
+                print("{}: {}".format(i, j))
+main()
