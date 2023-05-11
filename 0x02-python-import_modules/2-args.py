@@ -7,7 +7,7 @@ if __name__ == "__main__":
         if argc == 1:
             print("{} argument:".format(argc))
         elif argc == 0:
-            print(" 0 arguments. \n .")
+            print(" 0 arguments. ")
         else:
             print("{} arguments:".format(argc))
 
