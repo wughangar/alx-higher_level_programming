@@ -12,5 +12,5 @@ if __name__ == "__main__":
             print("{} arguments:".format(argc))
 
         for i, j in enumerate(argv, start=1):
-                print("{}: {}".format(i, j))
+            print("{}: {}".format(i, j))
 main()
