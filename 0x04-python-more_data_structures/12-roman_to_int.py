@@ -14,7 +14,7 @@ r_values = {'I': 1,
             'D': 500}
 result = 0
 rn_len = len(roman_string)
-for i in range(len(roman_numeral)):
+for i in range(len(roman_string)):
     rom_val = r_values[roman_string[i]]
     if i < rn_len - 1 and rom_val < r_values[roman_string[i + 1]]:
         result -= rom_val
