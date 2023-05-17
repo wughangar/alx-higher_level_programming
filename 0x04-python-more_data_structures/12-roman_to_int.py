@@ -2,6 +2,8 @@
 
 
 def roman_to_int(roman_string):
+    if roman_numeral is None or not isinstance(roman_numeral, str):
+        return None
     roman_values = {'I': 1,
                     'V': 5,
                     'X': 10,
@@ -11,8 +13,8 @@ def roman_to_int(roman_string):
     result = 0
     for i in range(len(roman_numeral)):
         rom_val = roman_values[roman_numeral[i]]
-        if i < len(roman_numeral) - 1 and rom_val < roman_values[roman_numeral[i + 1]]:
+        if i < rn_len - 1 and rom_val < r_values[roman_numeral[i + 1]]:
             reult -= rom_val
         else:
-            result =+ rom_val
+            result += rom_val
     return result
