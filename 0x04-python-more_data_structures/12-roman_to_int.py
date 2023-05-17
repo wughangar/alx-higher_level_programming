@@ -11,6 +11,7 @@ def roman_to_int(roman_string):
                     'C': 100,
                     'D': 500}
     result = 0
+    rn_len = len(roman_string)
     for i in range(len(roman_numeral)):
         rom_val = roman_values[roman_numeral[i]]
         if i < rn_len - 1 and rom_val < r_values[roman_numeral[i + 1]]:
