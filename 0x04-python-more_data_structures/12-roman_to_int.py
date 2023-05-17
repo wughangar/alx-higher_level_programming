@@ -2,7 +2,7 @@
 
 
 def roman_to_int(roman_string):
-    if roman_numeral is None or not isinstance(roman_string, str):
+    if roman_string is None or not isinstance(roman_string, str):
         return None
 
 
@@ -15,8 +15,8 @@ r_values = {'I': 1,
 result = 0
 rn_len = len(roman_string)
 for i in range(len(roman_numeral)):
-    rom_val = roman_values[roman_numeral[i]]
-    if i < rn_len - 1 and rom_val < r_values[roman_numeral[i + 1]]:
+    rom_val = r_values[roman_string[i]]
+    if i < rn_len - 1 and rom_val < r_values[roman_string[i + 1]]:
         result -= rom_val
     else:
         result += rom_val
