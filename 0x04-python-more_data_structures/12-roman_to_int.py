@@ -2,9 +2,9 @@
 
 
 def roman_to_int(roman_string):
-    if roman_numeral is None or not isinstance(roman_numeral, str):
+    if roman_numeral is None or not isinstance(roman_string, str):
         return None
-    roman_values = {'I': 1,
+    r_values = {'I': 1,
                     'V': 5,
                     'X': 10,
                     'L': 50,
