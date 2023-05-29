@@ -9,19 +9,32 @@ def list_division(my_list_1, my_list_2, list_length):
                 num1 = my_list_1[i]
                 num2 = my_list_2[i]
                 div = 0
-                if isinstance(num1, (inr, float)) and isinstance(num2, (int, float)):
+                if isinstance(num1, (int, float)) and isinstance(num2, (int, float)):
                     try:
                         div = num1 / num2
-                    except ZeroDivisionError:
-                        print("division by 0")
-                    else:
                         ans.append(div)
+                    except (ZeroDivisionError, IndexError) as x:
+                        print(x)
+                        ans.append(0)
                 else:
-                    print("wrong type")
+                    raise TypeError("Wrong type")
             except IndexError:
                 print("out of range")
                 ans.append(0)
-    except Exception:
+    except (TypeError, IndexError) as x:
+        print(x)
         print("An error occured")
     finally:
         return ans
+
+my_l_1 = [10, 8, 4]
+my_l_2 = [2, 4, 4]
+result = list_division(my_l_1, my_l_2, max(len(my_l_1), len(my_l_2)))
+print(result)
+
+print("--")
+
+my_l_1 = [10, 8, 4, 4]
+my_l_2 = [2, 0, "H", 2, 7]
+result = list_division(my_l_1, my_l_2, max(len(my_l_1), len(my_l_2)))
+print(result)
