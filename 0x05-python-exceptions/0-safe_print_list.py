@@ -2,16 +2,12 @@
 
 
 def safe_print_list(my_list=[], x=0):
-    count = 0
-    for item in my_list:
-        count += 1
-
     try:
-        if x <= count:
-            for item in my_list[:x]:
-                print(item, end=' ')
+        if x >= 0:
+            for i in range(x):
+                print(my_list[i], end='')
             print()
-        return count
+        return x
     except Exception:
-        print("Error:")
-        return 0
+        print()
+    return 0
