@@ -10,8 +10,8 @@ def safe_print_list(my_list=[], x=0):
         if x <= count:
             for item in my_list[:x]:
                 print(item, end=' ')
-                print()
-                return count
+            print()
+        return count
     except Exception:
         print("Error:")
         return 0
