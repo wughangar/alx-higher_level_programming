@@ -1,6 +1,12 @@
 #!/usr/bin/python3
 
 
+"""
+This class can be used to create square objects and perform various
+    operations related to squares
+"""
+
+
 class Square:
     """
     A class that defines a square
