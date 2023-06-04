@@ -1,0 +1,38 @@
+"""
+tests with an imported module for the add_int function.
+"""
+#testing two positive ints
+>>> __import__('0-add_integer').add_integer(2, 3)
+5
+
+#testing for a float and an int
+>>> __import__('0-add_integer').add_integer(2.8, 3)
+5
+
+#testing for two floats
+>>> __import__('0-add_integer').add_integer(2.5, 3.5)
+5
+
+#testing for one negative
+>>> __import__('0-add_integer').add_integer(-2, 3)
+1
+
+#testing for both negatives
+>>> __import__('0-add_integer').add_integer(-2, -3)
+-5
+
+#testing for both negative float numbers
+>>> __import__('0-add_integer').add_integer(-2.5, -3.1)
+-5
+
+#testing for zeros
+>>> __import__('0-add_integer').add_integer(0, 0)
+0
+
+#testing for zero with an int
+>>> __import__('0-add_integer').add_integer(0, 2)
+2
+
+#testing for 0 and float
+>>> __import__('0-add_integer').add_integer(2.5, 0)
+2
