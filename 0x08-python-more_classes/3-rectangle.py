@@ -1,7 +1,7 @@
 #!/usr/bin/python3
 
 """
-2. Area and Perimeter
+3. String representation
 """
 
 
@@ -86,3 +86,11 @@ class Rectangle:
             return 0
         perimeter = (self.width + self.height) * 2
         return perimeter
+
+    def __str__(self):
+        """
+        gives a string representation of the rectangle using #
+        """
+        if self.width == 0 or self.height == 0:
+            return ""
+        return '\n'.join(["#" * self.width] * self.height)
