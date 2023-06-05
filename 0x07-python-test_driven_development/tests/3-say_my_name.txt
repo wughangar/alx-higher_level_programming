@@ -1,0 +1,19 @@
+"""
+tests for a function that prints first and last name individually and togther
+"""
+
+#testing for last name given
+>>> __import__('3-say_my_name').say_my_name("Wughangar")
+My name is Wughangar
+
+#testing for first_name given
+>>> __import__('3-say_my_name').say_my_name("Rose", "")
+My name is Rose
+
+#testing for both names given
+>>> __import__('3-say_my_name').say_my_name("Rose", "Wughangar")
+My name is Rose Wughangar
+
+#testing for invalid type
+>>> __import__('3-say_my_name').say_my_name("123")
+This will raise a TypeError exception with the message "last_name must be a string"
