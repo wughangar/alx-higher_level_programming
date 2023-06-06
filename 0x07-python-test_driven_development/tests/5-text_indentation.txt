@@ -1,0 +1,35 @@
+"""
+test  cases for text identation function
+"""
+
+#test for valid input
+>>> __import__('5-text_indentation.py').text_indentation("Hello")
+Hello
+
+#test for spacing after character .
+>>> __import__('5-text_indentation.py').text_indentation("Rose.loki")
+Rose
+
+
+Loki
+
+#test for character ?
+>>> __import__('5-text_indentation.py').text_indentation("Rose?loki")
+Rose
+
+
+loki
+#test for character :
+>>> __import__('5-text_indentation.py').text_indentation("rose:loki")
+rose
+
+
+loki
+#test for int
+>>> __import__('5-text_indentation.py').text_indentation(5)
+TypeError: text must be a string
+
+#test for not string
+>>> __import__('5-text_indentation.py').text_indentation("")
+
+
