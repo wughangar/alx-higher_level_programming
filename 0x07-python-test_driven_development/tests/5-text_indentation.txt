@@ -2,34 +2,33 @@
 test  cases for text identation function
 """
 
-#test for valid input
->>> __import__('5-text_indentation.py').text_indentation("Hello")
-Hello
+def test_text_indentation():
+    from text_indentation import text_indentation
 
-#test for spacing after character .
->>> __import__('5-text_indentation.py').text_indentation("Rose.loki")
-Rose
+    # Test for valid input
+    assert text_indentation("Hello") == "Hello"
 
+    # Test for spacing after character .
+    assert text_indentation("Rose.loki") == "Rose\n\nloki"
 
-Loki
+    # Test for character ?
+    assert text_indentation("Rose?loki") == "Rose\n\nloki"
 
-#test for character ?
->>> __import__('5-text_indentation.py').text_indentation("Rose?loki")
-Rose
+    # Test for character :
+    assert text_indentation("rose:loki") == "rose\n\nloki"
 
+    # Test for int
+    try:
+        text_indentation(5)
+    except TypeError as e:
+        assert str(e) == "text must be a string"
 
-loki
-#test for character :
->>> __import__('5-text_indentation.py').text_indentation("rose:loki")
-rose
+    # Test for not string
+    try:
+        text_indentation(None)
+    except TypeError as e:
+        assert str(e) == "text must be a string"
 
-
-loki
-#test for int
->>> __import__('5-text_indentation.py').text_indentation(5)
-TypeError: text must be a string
-
-#test for not string
->>> __import__('5-text_indentation.py').text_indentation("")
-
+if __name__ == "__main__":
+    test_text_indentation()
 
