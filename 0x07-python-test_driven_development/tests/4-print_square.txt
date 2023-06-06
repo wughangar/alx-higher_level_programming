@@ -1,28 +1,31 @@
 """
 tests for printing a square
 """
-#test for 0 as size 
->>> __import__('4-print_square.py').print_square(0)
+import unittest
+from 4-print_square.py import print_square
 
-#test for an int
->>> __import__('4-print_square.py').print_square(3)
-###
-###
-###
+class PrintSquareTestCase(unittest.TestCase):
+    def test_size_zero(self):
+        result = print_square(0)
+        self.assertEqual(result, '')
 
-#test for 5
->>> __import__('4-print_square.py').print_square(5)
-#####
-#####
-#####
-#####
-#####
+    def test_positive_integer(self):
+        result = print_square(3)
+        expected_output = "###\n###\n###\n"
+        self.assertEqual(result, expected_output)
 
-#test for none- int
->>> __import__('4-print_square.py').print_square("3")
-TypeError: size must be an integer
+    def test_large_size(self):
+        result = print_square(5)
+        expected_output = "#####\n#####\n#####\n#####\n#####\n"
+        self.assertEqual(result, expected_output)
 
-#test for -size
->>> __import__('4-print_square.py').print_square(-4)
-ValueError: size must be >= 0
+    def test_non_integer(self):
+        with self.assertRaises(TypeError):
+            print_square("3")
 
+    def test_negative_size(self):
+        with self.assertRaises(ValueError):
+            print_square(-4)
+
+if __name__ == '__main__':
+    unittest.main()
