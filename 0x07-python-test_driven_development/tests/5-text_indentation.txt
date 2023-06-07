@@ -1,34 +1,32 @@
+import doctest
 """
 test  cases for text identation function
 """
 
-def test_text_indentation():
-    from text_indentation import text_indentation
 
-    # Test for valid input
-    assert text_indentation("Hello") == "Hello"
+#test for valid input
+>>> __import__('5-text_indentation.py').text_indentation("Hello")
+Hello
 
-    # Test for spacing after character .
-    assert text_indentation("Rose.loki") == "Rose\n\nloki"
-
-    # Test for character ?
-    assert text_indentation("Rose?loki") == "Rose\n\nloki"
-
-    # Test for character :
-    assert text_indentation("rose:loki") == "rose\n\nloki"
-
-    # Test for int
-    try:
-        text_indentation(5)
-    except TypeError as e:
-        assert str(e) == "text must be a string"
-
-    # Test for not string
-    try:
-        text_indentation(None)
-    except TypeError as e:
-        assert str(e) == "text must be a string"
+test for spacing after character.
+>>> __import__('5-text_indentation.py').text_indentation("Rose.loki")
+Rose.
+Loki
+#test for character ?
+>>> __import__('5-text_indentation.py').text_indentation("Rose?Loki")
+Rose?
+Loki
+#test for character :
+>>> __import__('5-text_indentation.py').text_indentation("rose:Loki")
+rose:
+Loki
+#test for int
+>>> __import__('5-text_indentation.py').text_indentation(5)
+Traceback (most recent call last):
+...
+TypeError: text must be a string
+#test for not string
+>>> __import__('5-text_indentation.py').text_indentation("")
 
 if __name__ == "__main__":
-    test_text_indentation()
-
+    doctest.testmod()
