@@ -1,0 +1,35 @@
+import unittest
+from '2-matrix_divided.py' import matrix_divided
+
+class DivmatrixTestCase(unittest.TestCase):
+    """
+    the following are tests for different cases 
+    """
+    #test for valid matrix
+    def test_valid_matrix(self):
+        matrix = [[2, 4, 6], [6, 8, 4], [3, 5, 7]]
+        div = 2
+        ans = matrix_divided(matrix, div)
+        oput = [[1, 2, 3], [3, 4, 2], [1.5, 2.5, 3.5]]
+        self.assertEqual(ans, oput)
+
+    #test for when div is 0
+    def test_div_zero(self):
+        matrix = [[2, 4, 6], [6, 8, 4], [3, 5, 7]]
+        div = 0
+        self.assertRaises(ZeroDivisionError, matrix_divided, matrix, div)
+
+    #test wrong division values
+    def test_wrongdiv_value(self)
+        matrix = [[2, 4, 6], [6, 8, 4], [3, 5, 7]]
+        div = "x"
+        self.assertRaises(TypeError, matrix_divided, matrix, div)
+
+    #test for when the matrix is invalid 
+    def test_invalid_matrix(self):
+        matrix = [[2, 4, 6], [6, 8], [3, 5, 7]]
+        div = 2
+        self.assertRaises(TypeError, matrix_divided, matrix, div)
+
+if __name__ == '__main__':
+    unittest.main()

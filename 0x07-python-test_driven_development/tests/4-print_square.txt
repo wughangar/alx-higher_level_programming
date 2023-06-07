@@ -1,0 +1,31 @@
+import doctest
+
+def test_print_square():
+    """
+    Test cases for the print_square function
+    """
+    # Test for 0 size
+    >>> __import__('4-print_square').print_square(0)
+
+    # Test for valid size
+    >>> __import__('4-print_square').print_square(2)
+    ##
+    ##
+
+    # Test for a bigger number
+    >>> __import__('4-print_square').print_square(6)
+    ######
+    ######
+    ######
+    ######
+    ######
+    ######
+
+    # Test for a negative number
+    """
+    >>> __import__('4-print_square').print_square(-2)
+    Traceback (most recent call last):
+      ...
+    ValueError: size must be >= 0
+    
+    """
