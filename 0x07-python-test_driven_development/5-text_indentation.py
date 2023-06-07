@@ -14,11 +14,11 @@ def text_indentation(text):
     """
     if not isinstance(text, str):
         raise TypeError("text must be string")
-    result = ""
-    chrts = [".", "?", ":"]
-    for i in text:
-        result += i
-        if i in chrts:
-            result += "\n\n"
+    rsl = ""
 
-    print(result)
+    for i in text:
+        if i == '.' or i == '?' or i ==  ':':
+            rsl += i + "\n\n"
+        else:
+            rsl += i
+    print(rsl)
