@@ -2,6 +2,8 @@
 """
 4. Text indentation
 """
+
+
 def text_indentation(text):
     """
     prints a text with 2 new lines after each character ., ? and :
@@ -19,6 +21,6 @@ def text_indentation(text):
     for i in text:
         output += i
         if i in [".", "?", ":"]:
-            output += "\n\n"
+            output += "$\n $\n"
 
     print(output)
