@@ -3,13 +3,14 @@
 13. Can I? : sets attribute and raises error if it cant
 """
 
+
 def add_attribute(obj, attr, value):
     """
     function that adds attribute or raises error if it cant
 
     Args:
-        obj: objet to have attrivute added to 
-        attr: attribute to be added 
+        obj: objet to have attrivute added to
+        attr: attribute to be added
         value: value of the attribute
 
     Raises:
