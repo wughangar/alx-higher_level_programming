@@ -30,7 +30,7 @@ class BaseGeometry:
             TypeError: when value is not an int
             ValueError: when value is less than 0
         """
-        if type(value) != int:
+        if not isinstance(value, int):
             raise TypeError(f"{name} must be an integer")
         if value <= 0:
             raise ValueError(f"{name} must be greator than 0")
