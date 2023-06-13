@@ -17,14 +17,13 @@ def pascal_triangle(n):
     """
     if n <= 0:
         return []
-    r = []
+    trow = []
     for i in range(n):
         row = [1]
-
         if i > 0:
-            prow = r[i-1]
+            prow = trow[i-1]
             for j in range(len(prow) - 1):
                 row.append(prow[j] + prow[j + 1])
             row.append(1)
-        r.append(row)
-    return r
+        trow.append(row)
+    return trow
