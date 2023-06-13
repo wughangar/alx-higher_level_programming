@@ -1,7 +1,7 @@
 #!/usr/bin/python3
 
 """
-10. Student to JSON with filter
+11. Student to disk and reload
 """
 
 
@@ -36,3 +36,13 @@ class Student:
             if isinstance(a, str) and hasattr(self, a):
                 jdict[a] = getattr(self, a)
         return jdict
+
+    def reload_from_json(self, json):
+        """
+        replaces attributes of student instances
+
+        Args:
+            json: dict containinh attribute names and their values
+        """
+        for a, value in json.items():
+            setattr(self, a, value)
