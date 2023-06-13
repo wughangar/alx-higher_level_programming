@@ -1,9 +1,9 @@
 #!/usr/bin/python3
-import json
 
 """
 8. Class to JSON
 """
+import json
 
 
 def class_to_json(obj):
