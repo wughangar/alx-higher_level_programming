@@ -4,7 +4,7 @@ test  cases for text identation function
 """
 
 #test for valid input
->>> __import__('5-text_indentation.py').text_identation("Hello")
+>>> __import__('5-text_indentation').text_identation("Hello")
 Hello
 
 test for spacing after character.

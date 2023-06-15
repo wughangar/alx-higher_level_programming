@@ -1,5 +1,9 @@
-import unittest
-from '2-matrix_divided.py' import matrix_divided
+import doctest
+import importlib
+
+matrix_divided = importlib.import_module("2-matrix_divided")
+
+#test for valid matrix
 
 class DivmatrixTestCase(unittest.TestCase):
     """
