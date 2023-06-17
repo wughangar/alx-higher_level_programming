@@ -23,7 +23,7 @@ class Rectangle(Base):
         Args:
             width - width of the rectangle
             height - height of the reactangle
-            x and y - point variables
+            x and y - hold the position of the rectangle
         each attribute has its own setter and getter
         """
         super().__init__(id)
