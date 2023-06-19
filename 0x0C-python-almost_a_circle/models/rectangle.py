@@ -2,7 +2,7 @@
 """
 2. First Rectangle
 """
-from base import Base
+from .base import Base
 
 
 class Rectangle(Base):
