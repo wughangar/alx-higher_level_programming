@@ -25,6 +25,7 @@ class Base:
             Base.__nb_objects += 1
             self.id = Base.__nb_objects
 
+    @staticmethod
     def to_json_string(list_dictionaries):
         """
         returns a json string of list_dictionaris
@@ -56,6 +57,7 @@ class Base:
         with open(f_name, 'w') as file:
             file.write(j_string)
 
+    @staticmethod
     def from_json_string(json_string):
         """
         method that returns a python string
