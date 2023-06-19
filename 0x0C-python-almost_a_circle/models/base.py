@@ -79,7 +79,7 @@ class Base:
             cls: class 
             dictionary: double pointer to dictionary
         """
-        tmp = cls()
+        tmp = cls(width = 0, height = 0)
         tmp.update(**dictionary)
         return tmp
 
