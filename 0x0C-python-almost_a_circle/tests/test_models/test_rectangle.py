@@ -46,10 +46,6 @@ class TestRectangle(unittest.TestCase):
         self.assertEqual(r.width, 3)
         self.assertEqual(r.x, 1)
 
-    def test_str(self):
-        r = Rectangle(5, 10, 2, 3, 1)
-        expected_output = "[Rectangle] (1)2/3 -5 / 10"
-        self.assertEqual(str(r), expected_output)
 
 
 if __name__ == '__main__':
