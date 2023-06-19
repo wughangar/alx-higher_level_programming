@@ -26,67 +26,39 @@ class Square(Rectangle):
         """
         size setter
         """
-        return self._Rectangle__width
+        return self.width
 
     @size.setter
     def size(self, value):
         """
         sets the value if size fo width and height
         """
-        self._Rectangle__width = value
-        self._Rectangle__height = value
+        self.width = value
+        self.height = value
 
     def __str__(self):
         """
         returns a string
         """
-        return f"[Square] ({self.id}) {self.x}/{self.y} - {self.size}"
+        return f"[Square] ({self.id}) {self.x}/{self.y} - {self.width}"
 
     @property
-    def width(self):
+    def size(self):
         """
         getter for width
         """
-        return self._Rectangle__width
+        return self.width
 
-    @width.setter
-    def width(self, value):
+    @size.setter
+    def size(self, value):
         """
-        sets width to value
+        setter method for size (width or height).
 
-        Raises:
-            TypeError: when width is not an integer
-            ValueError: when value is < 0
+        Args:
+           value: value to set for size(width and height)
         """
-        if not isinstance(value, int):
-            raise TypeError("width must be an integer")
-        if value <= 0:
-            raise ValueError("width must be >= 0")
-        self._Rectangle__width = value
-        self._Rectangle__height = value
-
-    @property
-    def height(self):
-        """
-        height setter
-        """
-        return self._Rectangle__height
-
-    @height.setter
-    def height(self, value):
-        """
-        sets the height to value
-
-        Raises:
-            TypeError: when height is not an integer
-            ValueError: when value is less than 0
-        """
-        if not isinstance(value, int):
-            raise TypeError("height must be an integer")
-        if value < 0:
-            raise ValueError("value must be >=  0")
-        self._Rectangle__height = value
-        self._Rectangle__width = value
+        self.width = value
+        self.height = value
 
     def update(self, *args, **kwargs):
         """
