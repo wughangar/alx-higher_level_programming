@@ -76,10 +76,10 @@ class Base:
         class method that returns an instance with all attributes
 
         Args:
-            cls: class instance
+            cls: class 
             dictionary: double pointer to dictionary
         """
-        tmp = cls(width=0, height=0)
+        tmp = cls()
         tmp.update(**dictionary)
         return tmp
 
