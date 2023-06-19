@@ -52,7 +52,7 @@ class Base:
 
         c_name = cls.__name__
         f_name = f"{c_name}.json"
-        j_string = cls.to_json_string([obj.to_dictionary() for obj in list_objs])
+        j_string = cls.to_json_string([obj.to_dictionary() for i in list_objs])
 
         with open(f_name, 'w') as file:
             file.write(j_string)
@@ -76,10 +76,10 @@ class Base:
         class method that returns an instance with all attributes
 
         Args:
-            cls: class 
+            cls: class
             dictionary: double pointer to dictionary
         """
-        tmp = cls(width = 0, height = 0)
+        tmp = cls(width=0, height=0)
         tmp.update(**dictionary)
         return tmp
 
