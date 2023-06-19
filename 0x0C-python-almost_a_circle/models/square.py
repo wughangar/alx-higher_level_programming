@@ -6,7 +6,6 @@
 from models.rectangle import Rectangle
 
 
-
 class Square(Rectangle):
     """
     class that inherits all methods from rectangle
