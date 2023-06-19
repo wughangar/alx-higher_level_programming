@@ -108,3 +108,11 @@ class Base:
             instance = cls.create(**item)
             temp.append(instance)
         return temp
+
+    @classmethod
+    def save_to_file_csv(cls, list_objs):
+        """
+        method that saves file in cvs
+
+        Args:
+            cls:
