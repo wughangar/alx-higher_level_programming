@@ -103,7 +103,7 @@ class Base:
         except FileNotFoundError:
             return []
 
-        p_data = from_json_string(j_data)
+        p_data = cls.from_json_string(j_data)
         temp = []
 
         for item in p_data:
