@@ -3,8 +3,6 @@
 2. First Rectangle
 """
 from .base import Base
-import sys
-sys.path.append('..')
 
 
 class Rectangle(Base):
