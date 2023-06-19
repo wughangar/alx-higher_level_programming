@@ -98,9 +98,7 @@ class Rectangle(Base):
         """
         overrides the __str__ method
         """
-        return (f"[Rectangle] ({self.id}) "
-                f"{self.__x}/{self.__y} -"
-                f"{self.__width} / {self.__height}")
+        return f"[Rectangle] ({self.id}) {self.__x}/{self.__y} - {self.__width} / {self.__height}"
 
     def update(self, *args, **kwargs):
         """
