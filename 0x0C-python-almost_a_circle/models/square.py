@@ -3,7 +3,7 @@
 """
 10. And now, the Square!
 """
-from .rectangle import Rectangle
+from rectangle import Rectangle
 
 
 class Square(Rectangle):
