@@ -7,3 +7,6 @@ USE hbtn_0c_0;
 
 -- Modify table encoding
 ALTER TABLE first_table DEFAULT CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci;
+
+-- modify the columb encoding
+ALTER TABLE first_table MODIFY name CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci;
