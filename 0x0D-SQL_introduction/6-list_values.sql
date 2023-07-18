@@ -1,2 +1,2 @@
 -- script that lists all rows of the table first_table
-SELECT * FROM first_table LIMIT 1;
+SELECT * FROM first_table;
