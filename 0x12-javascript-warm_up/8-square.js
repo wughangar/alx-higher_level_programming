@@ -9,9 +9,9 @@ if (!isNaN(arg)) {
   console.log('Missing size');
 }
 
-for (let i = 1; i < num; i++) {
-  let row = 'X';
-  for (let j = 1; j < num; j++) {
+for (let i = 0; i < num; i++) {
+  let row = '';
+  for (let j = 0; j < num; j++) {
     row += 'X';
   }
   console.log(row);
