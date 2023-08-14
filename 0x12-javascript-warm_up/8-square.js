@@ -10,9 +10,9 @@ if (!isNaN(arg)) {
 }
 
 for (let i = 0; i < num; i++) {
-	let row = 'X';
-	for (let j = 0; j < num; j++) {
-		row += 'X';
-	}
-	console.log(row);
+  let row = 'X';
+  for (let j = 0; j < num; j++) {
+    row += 'X';
+  }
+  console.log(row);
 }
