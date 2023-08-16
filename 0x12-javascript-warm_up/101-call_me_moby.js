@@ -1,10 +1,9 @@
-#1/usr/bin/node
+#!/usr/bin/node
 
-function Xtimes(x, theFunction) {
-	if (x <= 0) {
-		return;
-	}
-
-	theFunction();
-	Xtimes(x - 1, theFunction0;
+function myFunction (x, theFunction) {
+  for (let i = x; i > 0; i--) {
+    theFunction();
+  }
 }
+
+module.exports = myFunction;
