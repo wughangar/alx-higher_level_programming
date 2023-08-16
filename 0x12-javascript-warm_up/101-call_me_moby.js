@@ -1,9 +1,10 @@
 #!/usr/bin/node
 
-function myFunction (x, theFunction) {
-  for (let i = x; i > 0; i--) {
-    theFunction();
+function callMeMoby (x, theFunction) {
+  if (x <= 0) {
+    return;
   }
+  theFunction();
+  callMeMoby(x - 1, theFunction);
 }
-
-module.exports = myFunction;
+module.exports = { callMeMoby };
