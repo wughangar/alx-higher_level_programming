@@ -13,8 +13,14 @@ if __name__ = '__main__':
     database_name = sys.argv[3]
 
     # connect to database
-    db = MySQLdb.connect(host="localhost", port=3306, user=username, passwd=password, db=database_name)
-    cursor = db.cursor();
+    db = MySQLdb.connect(
+            host="localhost",
+            port=3306,
+            user=username,
+            passwd=password,
+            db=database_name
+            )
+    cursor = db.cursor()
 
     # send and execute the request
     selected_list = "SELECT *  FROM states ORDER BY id ASC;"
