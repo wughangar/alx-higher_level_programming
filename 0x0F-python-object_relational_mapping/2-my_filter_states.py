@@ -1,19 +1,16 @@
 #!/usr/bin/python3
 """
-import sys for argv and mysqldb
+Filter states by user input
 """
 
 import MySQLdb
 import sys
 
 if __name__ == '__main__':
-    """
-    script that lists all the states from the database hbtn_0e_0_usa
-    """
 
     if len(sys.argv) != 5:
         sys.exit("Usage: python script.py <mysql_username>"
-                 "<mysql_password> <database_name>")
+                 "<mysql_password> <database_name> <given_arg>")
     username = sys.argv[1]
     password = sys.argv[2]
     database_name = sys.argv[3]
@@ -29,9 +26,10 @@ if __name__ == '__main__':
     cursor = db.cursor()
 
     selected_list = ("SELECT *  FROM states"
-                     "WHERE name LIKE %s ORDER BY id ASC;")
+                     "WHERE name =  %s "
+                     "ORDER BY id ASC;")
 
-    cursor.execute(selected_list, (f"{given_arg}%",))
+    cursor.execute(selected_list, (given_arg))
 
     output = cursor.fetchall()
     for row in output:
