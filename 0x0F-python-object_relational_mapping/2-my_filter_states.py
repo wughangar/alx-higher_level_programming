@@ -29,7 +29,7 @@ if __name__ == '__main__':
                      "WHERE name =  %s "
                      "ORDER BY id ASC;")
 
-    cursor.execute(selected_list, (given_arg))
+    cursor.execute(selected_list.format(given_arg))
 
     output = cursor.fetchall()
     for row in output:
