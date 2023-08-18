@@ -7,10 +7,6 @@ import MySQLdb
 import sys
 
 if __name__ == '__main__':
-    """
-    script that lists all the states from the database hbtn_0e_0_usa
-    """
-
     if len(sys.argv) != 4:
         sys.exit("Usage: python script.py <mysql_username>"
                  "<mysql_password> <database_name>")
@@ -27,8 +23,8 @@ if __name__ == '__main__':
             )
     cursor = db.cursor()
 
-    selected_list = ("SELECT *  FROM states"
-                     "WHERE name LIKE 'N%'"
+    selected_list = ("SELECT *  FROM states "
+                     "WHERE name LIKE 'N%' " 
                      "ORDER BY id ASC;")
 
     cursor.execute(selected_list)
