@@ -1,15 +1,15 @@
 #!/usr/bin/python3
 
-if __name__ = '__main__':
+if __name__ == '__main__':
     import MySQLdb
     import sys
     """
     script that lists all the states from the database hbtn_0e_0_usa
     """
 
-    if len(sys.argv != 4:
-            sys.exit()
-
+    if len(sys.argv) != 4:
+        sys.exit("Usage: python script.py <mysql_username>"
+                 "<mysql_password> <database_name>")
     # get the required parameters
     username = sys.argv[1]
     password = sys.argv[2]
