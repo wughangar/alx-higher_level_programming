@@ -24,7 +24,7 @@ if __name__ == '__main__':
     cursor = db.cursor()
 
     selected_list = ("SELECT *  FROM states "
-                     "WHERE name LIKE 'N%' " 
+                     "WHERE name LIKE 'N%' "
                      "ORDER BY id ASC;")
 
     cursor.execute(selected_list)
