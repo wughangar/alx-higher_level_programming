@@ -26,10 +26,10 @@ if __name__ == '__main__':
     cursor = db.cursor()
 
     selected_list = ("SELECT *  FROM states"
-                     "WHERE name =  %s "
-                     "ORDER BY id ASC;")
+                     "WHERE name = '{}' "
+                     "ORDER BY id ASC;").format(given_arg)
 
-    cursor.execute(selected_list.format(given_arg))
+    cursor.execute(selected_list)
 
     output = cursor.fetchall()
     for row in output:
