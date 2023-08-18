@@ -26,8 +26,8 @@ if __name__ == '__main__':
     cursor = db.cursor()
 
     selected_list = ("SELECT *  FROM states"
-                     "WHERE name = '{}' "
-                     "ORDER BY id ASC;").format(given_arg)
+                     "WHERE name LIKE '{}' "
+                     "ORDER BY id ASC;".format(given_arg))
 
     cursor.execute(selected_list)
 
