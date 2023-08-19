@@ -28,8 +28,9 @@ if __name__ == '__main__':
     cursor.execute(query, (statename,))
     output = cursor.fetchall()
 
-    for row in output:
-        print(row)
+    cities = [row[1] for row in output]
+    cities_str = ', '.join(cities)
+    print(cities_str)
 
     cursor.close()
     db.close()
