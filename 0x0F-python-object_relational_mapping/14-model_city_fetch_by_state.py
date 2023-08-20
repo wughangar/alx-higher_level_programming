@@ -11,6 +11,9 @@ from model_state import Base, State
 from model_city import City
 
 if __name__ == '__main__':
+    """
+    initialize argv
+    """
     db_user = sys.argv[1]
     db_password = sys.argv[2]
     db_name = sys.argv[3]
