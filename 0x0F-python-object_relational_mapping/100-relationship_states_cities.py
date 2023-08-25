@@ -25,7 +25,7 @@ if __name__ == '__main__':
     engine = create_engine(db_url)
     Base.metadata.create_all(engine)
 
-    session = sessionmaker(bind=engine)
+    Session = sessionmaker(bind=engine)
     session = Session()
 
     new_state = State(name='California')
