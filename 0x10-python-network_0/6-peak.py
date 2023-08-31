@@ -5,6 +5,9 @@ function to find peak in a list on unsorted integers
 
 
 def find_peak(list_of_integers):
+    """
+    peak function covering all edge cases
+    """
     n = len(list_of_integers)
     if n == 0:
         return None
