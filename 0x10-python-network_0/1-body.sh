@@ -1,3 +1,3 @@
 #!/bin/bash
 #script that displaus the body of a url get response for code 200
-url="$1"; response=$(curl -s -o /dev/null -w "%{http_code}" "$url"); [ "$response" -eq 200 ] && curl -s -X GET "$url"
+url="$1"; curl -s "$url" | wc -c
