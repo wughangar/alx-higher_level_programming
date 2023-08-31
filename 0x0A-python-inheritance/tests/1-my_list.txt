@@ -1,0 +1,11 @@
+"""
+test cases for my list
+"""
+#test for correct output
+>>> my_list = __import__('1-my_list').MyList([1, 4, 2, 3, 5])
+>>> my_list.print_sorted()
+[1, 2, 3, 4, 5]
+
+if __name__ == "__main__":
+    import doctest
+    doctest.testmod(verbose=True)
