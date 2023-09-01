@@ -10,8 +10,9 @@ if __name__ == "__main__":
     url = sys.argv[1]
     try:
         with urllib.request.urlopen(url) as response:
-            data = response.read()
-            decoded_data = data.decord('utf-8')
-            print(decoded_data)
+            data = response.read().decode('utf-8')
+            print(data)
     except urllib.error.HTTPError as e:
         print(f"Error code: {e.code}")
+    except urllib.error.URLError as e:
+        print(f"URL Error: {e}")
