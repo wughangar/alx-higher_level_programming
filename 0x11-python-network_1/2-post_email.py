@@ -4,7 +4,7 @@
 """
 
 import urllib.request
-import sys.argv
+import sys
 
 url = sys.argv[1]
 data = sys.argv[2]
