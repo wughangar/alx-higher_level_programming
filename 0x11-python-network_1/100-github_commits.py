@@ -6,6 +6,7 @@
 import sys
 import requests
 
+
 if __name__ == "__main__":
     if len(sys.argv) != 3:
         print("Usage: python script.py <repository_name> <owner_name>")
@@ -26,8 +27,8 @@ if __name__ == "__main__":
                 sha_code = commit['sha']
                 author_name = commit['commit']['author']['name']
                 print(f"{sha_code}: {author_name}")
-            else:
-                print("Error: Unable to fetch commits")
+        else:
+            print("Error: Unable to fetch commits")
     except requests.exceptions.RequestException as e:
         print(f"Error: {e}")
         sys.exit(1)
