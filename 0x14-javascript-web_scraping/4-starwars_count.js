@@ -9,19 +9,16 @@ request.get(apiUrl, (error, response, body) => {
     console.error('Error:', error);
     process.exit(1);
   }
-
   if (response.statusCode !== 200) {
-    console.error('Error: Failed to fetch movie data. Status code:', response.statusCode);
+    console.error('Error: Failed to fetch character data. Status code:', response.statusCode);
     process.exit(1);
   }
-
   try {
-    const movieData = JSON.parse(body);
-    const characterName = 'Wedge Antilles';
-    const movies = movieData.results;
+    const moviesData = JSON.parse(body).results;
+    const characterID = 18;
 
-    const numberOfMovies = movies.filter(movie =>
-      movie.characters.some(character => character.includes(characterName))
+    const numberOfMovies = moviesData.filter(movie =>
+      movie.characters.includes(`https://swapi-api.alx-tools.com/api/people/${characterID}/`)
     ).length;
 
     console.log(`${numberOfMovies}`);
